@@ -8,6 +8,22 @@
 // cheat sheet: the radius of a circle is the distance from the center to the edge. A circle's perimeter is equal to 2 * pi * radius. A circle's area is equal to pi * radius * radius
 // Write your Circle class here
 
+class Circle {
+    constructor(radius) {
+        this.radius = radius        
+    }
+    calculatePerimeter() {
+        const perimeter = this.radius * 2 * Math.PI
+        return perimeter
+    }
+    calculateArea() {
+        const area = Math.pow(this.radius, 2) * Math.PI
+        return area
+    }
+    
+}
+const newCircle = new Circle(5);
+console.log(newCircle.calculateArea())
 
 
 
@@ -16,16 +32,50 @@
 // cheat sheet: a triangle's perimeter is equal to the sum of all its sides. A triangle is a right triangle if (first side)^2 + (second side)^2 === (third side)^2
 // Write your Triangle class here
 
+class Triangle {
+    constructor(side1, side2, side3) {
+        this.side1 = side1,
+        this.side2 = side2,
+        this.side3 = side3
+    }
+    checkTriangle() {
+        if (Math.pow(this.side3, 2) === Math.pow(side2, 2) + Math.pow(side1, 2)) {
+            return true;
+        }    
 
+    }
+    calculatePerimeter() {
+        const perimeter = this.side1 + this.side2 + this.side3
+        return perimeter
+    }
+}
 
-
+const newTriangle = new Triangle(3, 5, 8);
+console.log(newTriangle.calculatePerimeter());
 
 // create a new class called Rectangle
 // cheat sheet: a rectangle's area is equal to the width times the height. a rectangle's area is equal to the sum of all its sides (drawing a picture might help here)
 // Write your Rectangle class here
 
+class Rectangle {
+    constructor(width, height) {
+        this.width = width
+        this.height = height
 
+    }
+    rectangleArea() {
+        const area = this.width * this.height 
+        return area
+    }
+    
+    calculatePerimeter() {
+        const perimeter = this.width * 2 + this.height * 2
+        return perimeter
+    }
+}
 
+const newRectangle = new Rectangle(4, 3)
+console.log(newRectangle.calculatePerimeter());
 
 
 // create a new class called Square
